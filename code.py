@@ -22,7 +22,7 @@ def update_image(original,blur,contrast,emboss,contour,flipx,flipy):
 
     window['-IMAGE-'].update(data = bio.getvalue())
 
-image_path = 'test.png'
+image_path = sg.popup_get_file('Open', no_window = True)
 
 control_col = sg.Column([
     [sg.Frame('Blur', layout = [[sg.Slider(range = (0,10), orientation = 'h', key = '-BLUR-')]])],
